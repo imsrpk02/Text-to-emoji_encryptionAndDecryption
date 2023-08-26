@@ -16,7 +16,7 @@ function btnClicking (){
         document.querySelector("#encryption").style.display= 'block';
         document.querySelector("#dec-btn").style.backgroundColor = "#222";
         document.querySelector("#enc-btn").style.backgroundColor = "#333";
-        document.querySelector("#arrowIcon").style.rotate = "-360deg";
+        document.querySelector("#arrowIcon").style.rotate = "360deg";
         document.querySelector("#result").style.display = "none";
     })
 }
@@ -95,7 +95,7 @@ function decryption() {
         document.querySelector("#result").style.display = "block";
 
 
- 
+        
 
         var clutter2 = "";
 
@@ -125,7 +125,6 @@ function decryption() {
         console.log("FOUND", found);
 
         if (found) {
-            // Check if the provided password matches the stored password
             if (found.pass === pass2 && found.clutter === duplicatClt2) {
                 document.querySelector("#wrongResult").style.display = "none";
                 document.querySelector("#result").style.display = "block";
@@ -155,13 +154,27 @@ document.querySelector("#copyButton").addEventListener("click", function() {
     var copyText = document.querySelector("#result").value.trim();
     if (copyText) {
         navigator.clipboard.writeText(copyText);
-        // alert("Text copied: " + copyText);
+        document.getElementById("copied").style.display = "block";
+        console.log("copied");
+        copy();
+        // alert("Text copied!");
     } else {
         alert("No content to copy.");
     }
 });
 
 
+function copy() {
+    setTimeout(function() {
+        document.getElementById("copied").style.display = "none";
+    }, 2000);
+}
+
+
+
+document.getElementById("enc-btn").addEventListener("click", ()=>{
+    document.querySelector(".copyButton").style.display = "none";
+})
 
 
 /*Local storage ke liye basic commands....... */
