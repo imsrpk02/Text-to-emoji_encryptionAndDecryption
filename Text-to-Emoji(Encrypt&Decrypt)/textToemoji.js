@@ -174,6 +174,7 @@ function copy() {
 
 document.getElementById("enc-btn").addEventListener("click", ()=>{
     document.querySelector(".copyButton").style.display = "none";
+    document.getElementById("wrongResult").style.display = "none";
 })
 
 
