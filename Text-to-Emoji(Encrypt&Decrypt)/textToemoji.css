@@ -45,6 +45,8 @@ body{
     align-items: center; */
 }
 
+
+
 #main>h1 span img{
     transition: 0.3s ease;
 }
@@ -253,6 +255,8 @@ button img{
     border: none;
     display: none;
     resize: none;
+    padding: 5px;
+    outline: none;
 
 }
 
@@ -302,4 +306,18 @@ button img{
 input::placeholder {
     opacity: 0.4;
   }
+
+
+@media(max-width:855px){
+    #main> #endec-div{
+        width: 40%;
+    }
+}
+@media(max-width:600px){
+    #main> #endec-div{
+        width: 80%;
+
+    }
+}
+
 
